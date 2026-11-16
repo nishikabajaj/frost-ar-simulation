@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>FROST Reactor Simulation</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>FROST</h1>
+    <div class="modes" role="group" aria-label="Mode">
+      <button id="btnSim" class="on" aria-pressed="true">Simulation</button>
+      <button id="btnAr" aria-pressed="false">AR</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="simView"><canvas id="simCanvas" aria-label="Reactor flow animation"></canvas></section>
+    <section id="arView" hidden>
+      <div id="arNotice">
+        <h2>AR mode is under construction</h2>
+        <p>The prototype and its markers aren't set up yet. Start the camera to test with the standard Hiro and Kanji markers.</p>
+        <button id="btnStartAr">Start camera</button>
+        <p id="arMsg" role="status"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p id="caption"><span id="capNum"></span><span id="capText"></span></p>
+    <div id="progress" aria-hidden="true"></div>
+  </footer>
+
+  <script src="js/ar-config.js"></script>
+  <script src="js/sim.js"></script>
+  <script src="js/ar.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
